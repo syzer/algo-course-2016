@@ -10,7 +10,7 @@ nice refresher
 `python3 APlusB.py`
 
 #### cpp
-`g++ -pipe -O2 -std=c++11 APlusB.cpp -o AplusB`
+`g++ -pipe -O2 -std=c++11 APlusB.cpp -o AplusB.exe`
 
 
 ## Stress test
