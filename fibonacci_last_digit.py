@@ -11,7 +11,9 @@ def fib(n):
     if n in memo:
         return memo[n]
 
-    memo[n] = (fib(n - 1) + fib(n - 2)) % 10
+    memo[n - 2] = fib(n - 2) % 10
+    memo[n - 1] = fib(n - 1) % 10
+    memo[n] =  (memo[n - 2] + memo[n - 1]) % 10
     return memo[n]
 
 
