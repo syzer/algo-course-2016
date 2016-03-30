@@ -18,10 +18,10 @@ def fib(n):
 
 
 def get_fibonacci_last_digit(n):
+    sys.setrecursionlimit(100000)
     return fib(n)
 
 
 if __name__ == '__main__':
-    sys.setrecursionlimit(100000)
     n = int(input())
     print(get_fibonacci_last_digit(n))
