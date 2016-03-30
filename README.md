@@ -17,3 +17,26 @@ nice refresher
 
 - compare differences on fast and slow solution
 - debug start with small number set
+
+
+## Algorithms design
+
+- greedy algorithms
+    - local solution -> try to generalize
+- divide and conquer
+    - solve all pices separetly and put them together
+- dynamic programming
+    - large problem 
+    - solve small lemma
+- naive algorithms
+    - slow
+    - by the definition of the problem
+    - all enumerations to compute best cases
+    - sth that runs
+    - prove that you understood the problem
+    
+## Decreasing O(n)
+- standard tools:
+    - sorting
+    - new data structure
+- finally use magic

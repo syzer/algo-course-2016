@@ -6,3 +6,5 @@ for i in range(0, 1000):
     assert (last_digit(i) == last_num_table(i))
 
 assert (last_num_table(327305) == 5)
+
+
