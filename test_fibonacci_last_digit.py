@@ -1,5 +1,8 @@
-from fibonacci_last_digit import get_fibonacci_last_digit
+from fibonacci_last_digit import get_fibonacci_last_digit as last_digit
+from fibonacci_last_digit_table import last_num_table
 
-assert (get_fibonacci_last_digit(80) == 6)
-assert (get_fibonacci_last_digit(32730) == 9)
-# assert (get_fibonacci_last_digit(327305) == 5)
+for i in range(0, 1000):
+    print('testing for ', i)
+    assert (last_digit(i) == last_num_table(i))
+
+assert (last_num_table(327305) == 5)
