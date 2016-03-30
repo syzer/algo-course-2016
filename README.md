@@ -7,7 +7,16 @@ nice refresher
 # HOW
 
 #### python3
-`python3 APlusB.py`
+```
+python3 APlusB.py
+```
+#### python3
+```
+pip install memory_profiler
+pip install psutil
+python -m memory_profiler fib_table.py  
+```
+add `@profile` to functions you want to profile
 
 #### cpp
 `g++ -pipe -O2 -std=c++11 APlusB.cpp -o AplusB.exe`

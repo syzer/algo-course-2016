@@ -1,8 +1,8 @@
 # Uses python3
-table = [0, 1, 1]
 
+def fib_t(n):
+    table = [0, 1, 1]
 
-def fib(n):
     if n <= 2:
         return table[n]
 
@@ -14,4 +14,4 @@ def fib(n):
 
 if __name__ == '__main__':
     n = int(input())
-    print(fib(n))
+    print(fib_t(n))
