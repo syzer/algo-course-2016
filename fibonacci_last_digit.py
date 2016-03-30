@@ -1,5 +1,5 @@
 # Uses python3
-# import sys
+import sys
 
 memo = {}
 
@@ -22,5 +22,6 @@ def get_fibonacci_last_digit(n):
 
 
 if __name__ == '__main__':
+    sys.setrecursionlimit(100000)
     n = int(input())
     print(get_fibonacci_last_digit(n))
