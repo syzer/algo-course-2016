@@ -1,5 +1,3 @@
-n = int(input())
-
 memo = {}
 
 
@@ -16,4 +14,6 @@ def fib(n):
     return memo[n - 1] + memo[n - 2]
 
 
-print(fib(n))
+if __name__ == '__main__':
+    n = int(input())
+    print(fib(n))
