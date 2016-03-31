@@ -1,7 +1,13 @@
 # Uses python3
 
 def lcm(a, b):
-    return a * b
+    return int((a * b) / gcd(a, b))
+
+
+def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
 
 
 if __name__ == '__main__':
