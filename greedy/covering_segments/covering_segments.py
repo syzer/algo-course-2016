@@ -1,17 +1,17 @@
 # Uses python3
 import sys
-from collections import namedtuple
+from collections import namedtuple, Counter
 
 Segment = namedtuple('Segment', 'start end')
 
 
 def optimal_points(segments):
     points = []
-    # write your code here
     for s in segments:
-        points.append(s.start)
-        points.append(s.end)
-    return points
+        for p in range(s.start, s.end + 1):
+            points.append(p)
+    # return Counter(points).most_common(1)
+    return [x[0] for x in Counter(points).most_common(2)]
 
 
 if __name__ == '__main__':
