@@ -6,12 +6,22 @@ Segment = namedtuple('Segment', 'start end')
 
 
 def optimal_points(segments):
-    points = []
-    for s in segments:
-        for p in range(s.start, s.end + 1):
-            points.append(p)
-    # return Counter(points).most_common(1)
-    return [x[0] for x in Counter(points).most_common(2)]
+    final = []
+
+    while len(segments):
+        points = []
+
+        for s in segments:
+            for p in range(s.start, s.end + 1):
+                points.append(p)
+
+        most_common = Counter(points).most_common(1)[0]
+        final.append(most_common[0])
+
+        segments = [Segment(s.start, s.end) for s in segments
+                    if most_common[0] not in range(s.start, s.end + 1)]
+
+    return final
 
 
 if __name__ == '__main__':
