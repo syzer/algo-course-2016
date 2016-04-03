@@ -1,4 +1,5 @@
 # Uses python3
+import sys
 from collections import namedtuple
 
 Segment = namedtuple('Segment', 'start end')
@@ -14,7 +15,7 @@ def optimal_points(segments):
 
 
 if __name__ == '__main__':
-    n, *data = map(int, input().split())
+    n, *data = map(int, sys.stdin.read().split())
     segments = list(map(lambda x: Segment(x[0], x[1]), zip(data[::2], data[1::2])))
     points = optimal_points(segments)
     print(len(points))
