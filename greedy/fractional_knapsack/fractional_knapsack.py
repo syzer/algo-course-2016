@@ -1,9 +1,11 @@
+#!/usr/bin/env python
 # Uses python3
 import sys
 
 def get_optimal_value(capacity, weights, values):
     value = 0.
-    # write your code here
+
+    print(capacity, weights, values)
 
     return value
 
