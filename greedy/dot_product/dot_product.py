@@ -5,11 +5,12 @@ import sys
 
 def min_dot_product(a, b):
     res = 0
+
+    a.sort()
+    b.sort(key=lambda x: -x)
+
     for i in range(len(a)):
-        max_a = max(x for x in a[i:])
-        min_b = min(x for x in b[i:])
-        print('m', max_a, min_b)
-        res += max_a * min_b
+        res += a[i] * b[i]
 
     return res
 
