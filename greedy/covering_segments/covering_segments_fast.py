@@ -4,21 +4,16 @@ from collections import namedtuple, Counter
 
 Segment = namedtuple('Segment', 'start end')
 
+
 def optimal_points(segments):
     final = []
 
     while len(segments):
-        points = []
-
-        for s in segments:
-            for p in range(s.start, s.end + 1):
-                points.append(p)
-
-        most_common = Counter(points).most_common(1)[0]
-        final.append(most_common[0])
+        end_min = min(s.end for s in segments)
+        final.append(end_min)
 
         segments = [Segment(s.start, s.end) for s in segments
-                    if most_common[0] not in range(s.start, s.end + 1)]
+            if end_min not in range(s.start, s.end + 1)]
 
     return final
 
