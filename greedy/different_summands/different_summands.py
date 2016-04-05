@@ -5,14 +5,15 @@ import sys
 def optimal_summands(n):
     summands = []
     i = 1
-    sum = 0
 
-    while (sum * 2 + 2) < n:
+    while n > 2 * i:
+        n = n - i
         summands.append(i)
-        sum += i
         i += 1
 
-    summands.append(n - sum)
+    if n:
+        summands.append(n)
+
     return summands
 
 
