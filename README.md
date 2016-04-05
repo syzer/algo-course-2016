@@ -10,6 +10,7 @@ nice refresher
 ```
 python3 APlusB.py
 ```
+
 #### python3
 ```
 pip install memory_profiler
@@ -21,6 +22,11 @@ add `@profile` to functions you want to profile
 #### cpp
 `g++ -pipe -O2 -std=c++11 APlusB.cpp -o AplusB.exe`
 
+#### test python3
+```
+pip install -U pytest
+py.test ./greedy/different_summands/test_different_summands.py  
+```
 
 ## Stress test
 
@@ -32,6 +38,7 @@ add `@profile` to functions you want to profile
 
 - greedy algorithms
     - local solution -> try to generalize
+    - pick gready choice and prove its safe
 - divide and conquer
     - solve all pices separetly and put them together
 - dynamic programming
