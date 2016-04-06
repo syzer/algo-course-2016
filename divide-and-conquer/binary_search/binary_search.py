@@ -32,6 +32,7 @@ def linear_search(a, x):
 
 
 if __name__ == '__main__':
+    sys.setrecursionlimit(15000)
     input = sys.stdin.read()
     data = list(map(int, input.split()))
     n = data[0]

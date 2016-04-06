@@ -52,6 +52,10 @@ def stress():
     print(a)
 
 
+def generate_input():
+    for i in range(20):
+        print(random.randint(1, 3396631), end=' ')
+
 if __name__ == '__main__':
     sys.setrecursionlimit(15000)
     stress()
