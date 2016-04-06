@@ -13,9 +13,9 @@ def binary(a, left, right, x):
     if a[mid] == x:
         return mid
     if x < a[mid]:
-        return binary(a, left, right - 1, x)
+        return binary(a, left, mid - 1, x)
     else:
-        return binary(a, left + 1, right, x)
+        return binary(a, mid + 1, right, x)
 
 
 # adapter for binary
