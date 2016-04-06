@@ -27,13 +27,14 @@ public class BinarySearch {
         int m = scanner.nextInt();
         int[] b = new int[m];
         for (int i = 0; i < m; i++) {
-          b[i] = scanner.nextInt();
+            b[i] = scanner.nextInt();
         }
         for (int i = 0; i < m; i++) {
             //replace with the call to binarySearch when implemented
             System.out.print(linearSearch(a, b[i]) + " ");
         }
     }
+
     static class FastScanner {
         BufferedReader br;
         StringTokenizer st;
