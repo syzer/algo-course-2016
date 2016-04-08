@@ -1,5 +1,6 @@
 # Uses python3
 import sys
+from builtins import *
 from collections import Counter
 
 
@@ -17,12 +18,12 @@ def get_majority_element(a, left, right):
     return -1
 
 
-# proxy
+# adapter
 def get_maj_el(a, left, right):
-    if get_majority_element(a, left, right) == 1:
-        return 1
-    else:
+    if get_majority_element(a, left, right) == -1:
         return 0
+    else:
+        return 1
 
 
 def get_majority_pythonic(a, left, n):
