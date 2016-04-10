@@ -1,4 +1,4 @@
-# Uses python3
+# nodemon -x 'py.test ./divide-and-conquer/sorting/test_sorting.py'
 import sys
 import random
 from .sorting import randomized_quick_sort, partition2, partition3
