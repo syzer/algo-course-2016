@@ -22,7 +22,7 @@ def test_1():
 
 def test_2():
     rnd_sample = random.sample(range(30), 4)
-    assert sort_count(rnd_sample) == sort_count(rnd_sample)
+    assert sort_count(rnd_sample) == sorted(rnd_sample)
 
 
 if __name__ == '__main__':
