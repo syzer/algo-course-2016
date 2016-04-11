@@ -8,28 +8,15 @@ def partition3(a, l, r):
     j = l
     m2 = l
     for i in range(l + 1, r + 1):
-        if a[i] < x:
-            j += 1
-            # m2 += 1
-            a[i], a[j] = a[j], a[i]
-            print('alr', a, l, r)
-        if a[i] == x:
-            m2 += 1
-
-    a[l], a[j] = a[j], a[l]
-    print('a[l], a[j]', a[l], a[j])
-    return j, m2
-
-
-def partition2(a, l, r):
-    x = a[l]
-    j = l
-    for i in range(l + 1, r + 1):
+        print(i, j, m2, 'x', x, 'a.i', a[i])
         if a[i] <= x:
             j += 1
             a[i], a[j] = a[j], a[i]
+        if a[i] == x:
+            m2 = i
+
     a[l], a[j] = a[j], a[l]
-    return j
+    return j, m2
 
 
 # 3-way partition
@@ -42,6 +29,17 @@ def randomized_quick_sort3(a, l, r):
     randomized_quick_sort3(a, l, m - 1)
     # m ... m2 are in final position
     randomized_quick_sort3(a, m2 + 1, r)
+
+
+def partition2(a, l, r):
+    x = a[l]
+    j = l
+    for i in range(l + 1, r + 1):
+        if a[i] <= x:
+            j += 1
+            a[i], a[j] = a[j], a[i]
+    a[l], a[j] = a[j], a[l]
+    return j
 
 
 def randomized_quick_sort(a, l, r):
