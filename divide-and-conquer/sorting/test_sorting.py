@@ -16,6 +16,21 @@ def test_randomized_sort_large():
     randomized_quick_sort3(a, 0, len(a) - 1)  # :(
     assert a == sorted(a)
 
+
+def test_on_very_large_random_list():
+    b = [i for i in range(2000)]
+    random.shuffle(b)
+    randomized_quick_sort3(b, 0, len(b) - 1)  # :(
+    assert b == sorted(b)
+
+
+def test_on_weird_input():
+    b = [100, 1]
+    random.shuffle(b)
+    randomized_quick_sort3(b, 0, len(b) - 1)  # :(
+    assert b == sorted(b)
+
+
 def test_on_random_list():
     a = [int(1000 * random.random()) for i in range(10000)]
     randomized_quick_sort3(a, 0, len(a) - 1)  # :(
@@ -23,7 +38,7 @@ def test_on_random_list():
 
 
 def test_on_same_input():
-    a = [5, 5, 5, 5, 5, 5, 5, 3, 3, 3, 3, 3, 3, 3]
+    a = [2, 2, 2, 5, 5, 5, 5, 3, 3, 3, 3, 3, 3, 3]
     randomized_quick_sort3(a, 0, len(a) - 1)  # :(
     assert a == sorted(a)
 
