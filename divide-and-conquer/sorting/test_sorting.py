@@ -8,7 +8,6 @@ random.seed(10)
 def test_randomized_sort():
     a = [4, 3, 2, 5, 1]
     randomized_quick_sort3(a, 0, len(a) - 1)
-    # :( modifies array
     assert a == sorted(a)
 
 
@@ -17,9 +16,14 @@ def test_randomized_sort_large():
     randomized_quick_sort3(a, 0, len(a) - 1)  # :(
     assert a == sorted(a)
 
-
 def test_on_random_list():
     a = [int(1000 * random.random()) for i in range(10000)]
+    randomized_quick_sort3(a, 0, len(a) - 1)  # :(
+    assert a == sorted(a)
+
+
+def test_on_same_input():
+    a = [5, 5, 5, 5, 5, 5, 5, 3, 3, 3, 3, 3, 3, 3]
     randomized_quick_sort3(a, 0, len(a) - 1)  # :(
     assert a == sorted(a)
 

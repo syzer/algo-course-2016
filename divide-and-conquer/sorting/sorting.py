@@ -52,6 +52,7 @@ def randomized_quick_sort(a, l, r):
     randomized_quick_sort(a, m + 1, r)
 
 
+#     :( modifies array
 if __name__ == '__main__':
     input = sys.stdin.read()
     n, *a = list(map(int, input.split()))
