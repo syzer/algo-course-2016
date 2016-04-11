@@ -4,8 +4,21 @@ import random
 
 
 def partition3(a, l, r):
-    # write your code here
-    pass
+    x = a[l]
+    j = l
+    m2 = l
+    for i in range(l + 1, r + 1):
+        if a[i] < x:
+            j += 1
+            # m2 += 1
+            a[i], a[j] = a[j], a[i]
+            print('alr', a, l, r)
+        if a[i] == x:
+            m2 += 1
+
+    a[l], a[j] = a[j], a[l]
+    print('a[l], a[j]', a[l], a[j])
+    return j, m2
 
 
 def partition2(a, l, r):
@@ -17,6 +30,18 @@ def partition2(a, l, r):
             a[i], a[j] = a[j], a[i]
     a[l], a[j] = a[j], a[l]
     return j
+
+
+# 3-way partition
+def randomized_quick_sort3(a, l, r):
+    if l >= r:
+        return
+    k = random.randint(l, r)
+    a[l], a[k] = a[k], a[l]
+    m, m2 = partition3(a, l, r)
+    randomized_quick_sort3(a, l, m - 1)
+    # m ... m2 are in final position
+    randomized_quick_sort3(a, m2 + 1, r)
 
 
 def randomized_quick_sort(a, l, r):
@@ -33,6 +58,6 @@ def randomized_quick_sort(a, l, r):
 if __name__ == '__main__':
     input = sys.stdin.read()
     n, *a = list(map(int, input.split()))
-    randomized_quick_sort(a, 0, n - 1)
+    randomized_quick_sort3(a, 0, n - 1)
     for x in a:
         print(x, end=' ')
