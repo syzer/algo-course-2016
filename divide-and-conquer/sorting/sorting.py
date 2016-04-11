@@ -8,7 +8,6 @@ def partition3(a, l, r):
     j = l
     m2 = l
     for i in range(l + 1, r + 1):
-        print(i, j, m2, 'x', x, 'a.i', a[i])
         if a[i] <= x:
             j += 1
             a[i], a[j] = a[j], a[i]
