@@ -12,4 +12,4 @@ def quick_sort(a):
 
 
 a = [int(1000 * random.random()) for i in range(10000)]
-print(qsort1(a))
+print(quick_sort(a))
