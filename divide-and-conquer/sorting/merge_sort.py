@@ -1,30 +1,19 @@
-from collections import Counter
-
-
 def merge_sort(arr):
     if len(arr) == 1:
         return arr
 
-    if len(arr) == 2:
-        if arr[0] > arr[1]:
-            return [arr[1], arr[0]]
-        else:
-            return arr
-
     split = len(arr) // 2
 
     # sort halves recursively
-    # left = merge_sort(arr[split:])
-    # right = merge_sort(arr[0:split])
+    left = merge_sort(arr[split:])
+    right = merge_sort(arr[0:split])
 
-    # merge left/right
-    # merge(left, right)
-    return merge(sorted(arr[0:split]), sorted(arr[split:]))
+    return merge(left, right)
 
 
 def merge(left, right):
     output = []
-    while left  or right :
+    while left or right:
         if left:
             min_left = left[0]
         else:
@@ -45,5 +34,7 @@ def merge(left, right):
 a = [7, 2, 5, 3, 7, 13, 1, 6]
 test = merge_sort(a)
 print(test)
+
+
 def test_1():
     assert test == sorted(a)
