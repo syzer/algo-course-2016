@@ -1,11 +1,28 @@
-import sys
+# nodemon -x 'py.test test_inversions.py'
 from .inversions import *
 
 
-def test_small():
-    a = [2, 3, 9, 2, 9]
+# def test_small():
+#     a = [2, 3, 9, 2, 9]
+#     b = len(a) * [0]
+#     assert get_number_of_inversions(a, b, 0, len(a) - 1) == 2
+
+
+def test_sorted():
+    a = [1, 2, 3, 10, 11]
     b = len(a) * [0]
-    assert get_number_of_inversions(a, b, 0, len(a)) == 2
+    assert get_number_of_inversions(a, b, 0, len(a) - 1) == 0
+
+
+def test_out_of_order():
+    a = [11, 10, 9, 5, 2, 1]
+    b = len(a) * [0]
+    assert get_number_of_inversions(a, b, 0, len(a) - 1) == 35
+
+# def test_1():
+#     a = [11, 2, 3, 4, 5]
+#     b = len(a) * [0]
+#     assert get_number_of_inversions(a, b, 0, len(a) - 1) == 0
 
 
 # def test_big():
@@ -14,8 +31,11 @@ def test_small():
 #          24, 72, 91, 35, 86, 19, 75, 58, 71, 47, 76, 59, 64, 93, 17, 50, 56, 94, 90, 89, 32, 37, 34, 65, 1, 73, 41, 36,
 #          57, 77, 30, 22, 13, 29, 38, 16, 88, 61, 31, 85, 33, 54]
 #     b = len(a) * [0]
-#     assert get_number_of_inversions(a, b, 0, len(a)) == 2372
+#     assert get_number_of_inversions(a, b, 0, len(a)-1) == 2372
 
 
 if __name__ == '__main__':
     print('use pytest')
+
+    #
+

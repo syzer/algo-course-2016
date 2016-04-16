@@ -31,24 +31,24 @@ def merge(left, right):
     return output
 
 
-def merge_sort2(x):
+def merge_sort2(a):
     result = []
-    if len(x) < 2:
-        return x
-    mid = int(len(x)/2)
-    y = merge_sort2(x[:mid])
-    z = merge_sort2(x[mid:])
+    if len(a) < 2:
+        return a
+    mid = int(len(a) / 2)
+    right = merge_sort2(a[:mid])
+    left = merge_sort2(a[mid:])
     i = 0
     j = 0
-    while i < len(y) and j < len(z):
-        if y[i] > z[j]:
-            result.append(z[j])
+    while i < len(right) and j < len(left):
+        if right[i] > left[j]:
+            result.append(left[j])
             j += 1
         else:
-            result.append(y[i])
+            result.append(right[i])
             i += 1
-    result += y[i:]
-    result += z[j:]
+    result += right[i:]
+    result += left[j:]
 
     return result
 
@@ -83,9 +83,11 @@ print(test)
 def test_1():
     assert test == sorted(a)
 
+
 def test_2():
     a = [7, 2, 5, 3, 7, 13, 1, 6]
     assert merge_sort2(a) == sorted(a)
+
 
 def test_3():
     a = [7, 2, 5, 3, 7, 13, 1, 6]
