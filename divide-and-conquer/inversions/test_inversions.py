@@ -2,10 +2,11 @@
 from .inversions import *
 
 
-# def test_small():
-#     a = [2, 3, 9, 2, 9]
-#     b = len(a) * [0]
-#     assert get_number_of_inversions(a, b, 0, len(a) - 1) == 2
+# inversions [3,2], [9,3]
+def test_small():
+    a = [2, 3, 9, 2, 9]
+    b = len(a) * [0]
+    assert get_number_of_inversions(a, b, 0, len(a) - 1) == 2
 
 
 def test_sorted():
@@ -14,15 +15,27 @@ def test_sorted():
     assert get_number_of_inversions(a, b, 0, len(a) - 1) == 0
 
 
+# inversions =  [3,2], [5,2], [5,4]
+def test_3():
+    a = [1, 3, 5, 2, 4, 6]
+    b = len(a) * [0]
+    assert get_number_of_inversions(a, b, 0, len(a) - 1) == 3
+
+
+# max num of inversion its (n over  2) = n(n-1) / 2
 def test_out_of_order():
     a = [11, 10, 9, 5, 2, 1]
     b = len(a) * [0]
-    assert get_number_of_inversions(a, b, 0, len(a) - 1) == 35
+    assert get_number_of_inversions(a, b, 0, len(a) - 1) == 15
 
-# def test_1():
-#     a = [11, 2, 3, 4, 5]
-#     b = len(a) * [0]
-#     assert get_number_of_inversions(a, b, 0, len(a) - 1) == 0
+
+def test_4():
+    a = [11, 2, 3, 4, 5]
+    b = len(a) * [0]
+    assert get_number_of_inversions(a, b, 0, len(a) - 1) == 4
+
+# def test_10():
+#     assert
 
 
 # def test_big():
@@ -38,4 +51,3 @@ if __name__ == '__main__':
     print('use pytest')
 
     #
-
