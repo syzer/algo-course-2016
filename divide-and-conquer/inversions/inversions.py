@@ -1,8 +1,9 @@
 # Uses python3
-# good for colobarative filtering
+# good for collaborative filtering
 import sys
 
 inversions = 0
+
 
 def merge_sort2(a, length):
     # :(
@@ -21,11 +22,8 @@ def merge_sort2(a, length):
     while i < len(right) and j < len(left):
         if right[i] > left[j]:
             result.append(left[j])
-            if i:
-                inversions += i
-            else:
-                inversions += len(right)
-            print((len(right) - i, len(left) - j))
+            # HERE!!
+            inversions += len(right) - i
             j += 1
         else:
             result.append(right[i])
