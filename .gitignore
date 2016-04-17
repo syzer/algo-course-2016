@@ -61,3 +61,5 @@ target/
 .idea
 *.exe
 *.out
+rehash
+versions
