@@ -29,12 +29,15 @@ if __name__ == "__main__":
             pass
 
         if next == ')' or next == ']' or next == '}':
-            if opening_brackets_stack.pop().Match(next):
+            if opening_brackets_stack and opening_brackets_stack.pop().Match(next):
                 pass
             else:
-                fails.append(i)
+                fails.append(i + 1)
 
-    if len(fails) == 0:
+    if len(opening_brackets_stack) == 0 and len(fails) == 0:
         print('Success')
     else:
-        print(fails[0])
+        if len(fails):
+            print(fails[0])
+        else:
+            print(opening_brackets_stack.pop().position)
