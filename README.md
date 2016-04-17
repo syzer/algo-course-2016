@@ -56,3 +56,12 @@ py.test ./greedy/different_summands/test_different_summands.py
     - sorting
     - new data structure
 - finally use magic
+
+
+
+## Data structct
+
+### double linked list
+- midle elems O(n)
+- add/remove front O(1)
+- insert between nodes O(1)
