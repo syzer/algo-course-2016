@@ -1,5 +1,4 @@
 # python3
-
 import sys
 
 
@@ -22,13 +21,20 @@ if __name__ == "__main__":
     text = sys.stdin.read()
 
     opening_brackets_stack = []
+    fails = []
+
     for i, next in enumerate(text):
         if next == '(' or next == '[' or next == '{':
-            # Process opening bracket, write your code here
+            opening_brackets_stack.append(Bracket(next, i + 1))
             pass
 
         if next == ')' or next == ']' or next == '}':
-            # Process closing bracket, write your code here
-            pass
+            if opening_brackets_stack.pop().Match(next):
+                pass
+            else:
+                fails.append(i)
 
-            # Printing answer, write your code here
+    if len(fails) == 0:
+        print('Success')
+    else:
+        print(fails[0])
