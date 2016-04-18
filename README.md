@@ -62,8 +62,8 @@ py.test ./greedy/different_summands/test_different_summands.py
 ## Data structct
 
 ### double linked list
-- midle elems O(n)
-- add/r emove front O(1)
+- middle elems O(n)
+- add/remove front O(1)
 - insert between nodes O(1)
 
 ### bread first
@@ -82,3 +82,18 @@ py.test ./greedy/different_summands/test_different_summands.py
   print tree.key
   InOrderTraversal(tree.right)
   ```
+#### pre order traversal
+  ```
+  if !tree return
+  print(tree.key)
+  PreOrderTraversal(tree.left)
+  PreOrderTraversal(tree.right)
+  ```
+  
+#### post order traversal
+ ```
+ if !tree
+ PostOrderTraversal(tree.left)
+ PostOrderTraversal(tree.right)
+ print tree.key
+ ```

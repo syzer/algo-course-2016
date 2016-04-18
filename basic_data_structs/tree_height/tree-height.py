@@ -12,7 +12,17 @@ class TreeHeight:
         self.parent = list(map(int, sys.stdin.readline().split()))
 
     def compute_height(self):
-        # Replace this code with a faster implementation
+        maxHeight = 0
+        for vertex in range(self.n):
+            height = 0
+            i = vertex
+            while i != -1:
+                height += 1
+                i = self.parent[i]
+            maxHeight = max(maxHeight, height)
+        return maxHeight
+
+    def compute_height_fast(self):
         maxHeight = 0
         for vertex in range(self.n):
             height = 0
@@ -28,6 +38,7 @@ def main():
     tree = TreeHeight()
     tree.read()
     print(tree.compute_height())
+    print(tree.compute_height_fast())
 
 
 threading.Thread(target=main).start()
