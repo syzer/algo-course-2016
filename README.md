@@ -65,3 +65,20 @@ py.test ./greedy/different_summands/test_different_summands.py
 - midle elems O(n)
 - add/r emove front O(1)
 - insert between nodes O(1)
+
+### bread first
+#### depth first
+  ```
+  q.que(root)
+  while not q.deque
+    print node
+    if node.left:
+        q.que(node.left)
+  ```      
+#### in order traverse
+  ```
+  if !tree return
+  InOrdeTraversal(tree.left)
+  print tree.key
+  InOrderTraversal(tree.right)
+  ```
