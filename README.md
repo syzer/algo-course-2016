@@ -59,14 +59,25 @@ py.test ./greedy/different_summands/test_different_summands.py
 
 
 
-## Data structct
+## Data struct
 
 ### double linked list
 - middle elems O(n)
 - add/remove front O(1)
 - insert between nodes O(1)
 
-### bread first
+### tree
+#### bread first
+  ```
+  q.que(tree)
+  while not q.empty():
+    node = q.deque()
+    print node
+    if node.left:
+        q.que(node.left)
+    if node.right:
+        q.que(node.right)
+  ```
 #### depth first
   ```
   q.que(root)
@@ -97,3 +108,4 @@ py.test ./greedy/different_summands/test_different_summands.py
  PostOrderTraversal(tree.right)
  print tree.key
  ```
+ information where you are on stack
