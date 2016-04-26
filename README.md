@@ -100,7 +100,6 @@ py.test ./greedy/different_summands/test_different_summands.py
   PreOrderTraversal(tree.left)
   PreOrderTraversal(tree.right)
   ```
-  
 #### post order traversal
  ```
  if !tree
