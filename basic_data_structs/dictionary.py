@@ -23,7 +23,7 @@ class OrdListHashTable(HashTable):
     better for anagrams would be use dict with lists as values
     """
 
-    def put(self, word, **kwargs):
+    def put(self, word):
         hash_code = ord_key(word)
 
         if self.get(hash_code) is None:
@@ -32,21 +32,6 @@ class OrdListHashTable(HashTable):
             prev = self.get(hash_code)
             prev.append(word)
             super().put(hash_code, prev)
-
-# [None, None, None, None, ['Cat', 'cat', 'cat'], None, None, None, ['doge', 'dgeo', 'dgeo', 'oged', 'oged'], None, None]
-
-
-# Dict = OrdListHashTable()
-# Dict.put('doge')
-# Dict.put('dgeo')
-# Dict.put('oged')
-# Dict.put('Cat')
-# Dict.put('cat')
-
-# assert Dict.get('dog')
-# assert Dict.get('oge')
-# assert Dict.get('cat')
-# print(Dict.data)
 
 
 class HashTableDict:

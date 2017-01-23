@@ -113,3 +113,12 @@ py.test ./greedy/different_summands/test_different_summands.py
 ```
 pytest basic_data_structs/ -s
 ```
+```
+npm i -g nodemon
+# or watch
+nodemon -w ./basic_data_structs/ -e py -x 'pytest basic_data_structs/ -s'
+```
+
+# TODO
+[ ] lcs
+[ ] bst 

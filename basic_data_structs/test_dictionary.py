@@ -1,4 +1,4 @@
-from basic_data_structs.dictionary import OrdTable, HashTableDict
+from basic_data_structs.dictionary import OrdTable, HashTableDict, OrdListHashTable
 from basic_data_structs.hash_table import HashTable
 
 
@@ -17,6 +17,19 @@ def test_ord_table():
     assert 'dog' in o.data
     assert 'lion' in o.data
     assert 'chicken' in o.data
+
+
+def test_ord_hash_table():
+    ord_list = OrdListHashTable()
+    ord_list.put('doge')
+    ord_list.put('dgeo')
+    ord_list.put('oged')
+    ord_list.put('Cat')
+    ord_list.put('cat')
+
+    print(ord_list.data)
+    # [None, None, None, None, ['Cat', 'cat', 'cat'], None, None, None, ['doge', 'dgeo', 'dgeo', 'oged', 'oged'],
+    # None, None]
 
 
 def test_hash_table_with_dict():
