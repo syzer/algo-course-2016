@@ -108,3 +108,8 @@ py.test ./greedy/different_summands/test_different_summands.py
  print tree.key
  ```
  information where you are on stack
+
+#### test basic data structures
+```
+pytest basic_data_structs/ -s
+```
