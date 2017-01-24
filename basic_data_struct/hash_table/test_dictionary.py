@@ -1,5 +1,5 @@
-from basic_data_struct.dictionary import OrdTable, HashTableDict, OrdListHashTable
-from basic_data_struct.hash_table import HashTable
+from basic_data_struct.hash_table.dictionary import OrdTable, HashTableDict, OrdListHashTable
+from basic_data_struct.hash_table.manually_implemented import HashTable
 
 
 def test_ord_table():
