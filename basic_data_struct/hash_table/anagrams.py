@@ -1,4 +1,4 @@
-from basic_data_structs.dictionary import HashTableDict
+from basic_data_struct.dictionary import HashTableDict
 
 
 # f O(N L log L)

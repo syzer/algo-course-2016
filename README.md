@@ -111,12 +111,12 @@ py.test ./greedy/different_summands/test_different_summands.py
 
 #### test basic data structures
 ```
-pytest basic_data_structs/ -s
+pytest basic_data_struct/ -s
 ```
 ```
 npm i -g nodemon
 # or watch
-nodemon -w ./basic_data_structs/ -e py -x 'pytest basic_data_structs/ -s'
+nodemon -w ./basic_data_struct/ -e py -x 'pytest basic_data_struct/ -s'
 ```
 
 # TODO

@@ -1,4 +1,4 @@
-from basic_data_structs.hash_tables_examples.anagrams import find_anagrams
+from basic_data_struct.hash_table.anagrams import find_anagrams
 
 
 def test_find_anagrams():

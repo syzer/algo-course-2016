@@ -1,4 +1,4 @@
-from basic_data_structs.hash_table import HashTable
+from basic_data_struct.manually_implemented import HashTable
 
 
 class OrdTable(HashTable):
