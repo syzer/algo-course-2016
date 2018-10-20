@@ -1,3 +1,5 @@
+# Uses python3
+
 memo = {}
 
 
